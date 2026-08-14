@@ -1,0 +1,6 @@
+{
+  "name": "FlashCart AI",
+  "description": "Next-generation quick commerce experience with AI shopping assistant, real-time map tracking, pantry scanning, automated meal generation, and collaborative family carts.",
+  "requestFramePermissions": ["camera", "geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

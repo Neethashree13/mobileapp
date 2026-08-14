@@ -1,0 +1,9 @@
+# iOS cocoapods target bindings scaffold
+platform :ios, '13.0'
+
+use_frameworks!
+use_modular_headers!
+
+target 'Runner' do
+  # Flutter Pods are linked automatically by Flutter command line tools
+end

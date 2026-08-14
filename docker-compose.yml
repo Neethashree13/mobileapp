@@ -1,0 +1,46 @@
+version: "3.8"
+
+services:
+  database:
+    image: postgres:15-alpine
+    container_name: flashcart_postgres
+    restart: always
+    environment:
+      POSTGRES_DB: flashcart_db
+      POSTGRES_USER: postgres_admin
+      POSTGRES_PASSWORD: super_secure_db_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres_admin -d flashcart_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: flashcart_api
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - PGHOST=database
+      - PGPORT=5432
+      - PGDATABASE=flashcart_db
+      - PGUSER=postgres_admin
+      - PGPASSWORD=super_secure_db_password
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - FIREBASE_PROJECT_ID=${FIREBASE_PROJECT_ID}
+    depends_on:
+      database:
+        condition: service_healthy
+
+volumes:
+  pgdata:
+    driver: local

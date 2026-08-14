@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "829800706469",
+    "project_id": "flashcart-ai",
+    "storage_bucket": "flashcart-ai.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:829800706469:android:3d8a71ef5ee039376e784c",
+        "android_client_info": {
+          "package_name": "com.example.flashcart_ai"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "829800706469-hsg30ufp51vp345cv15i8mt5p33jerif.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.flashcart_ai",
+            "certificate_hash": "b1eb17c59474d77e3e622223f7ed8d302e08b648"
+          }
+        },
+        {
+          "client_id": "829800706469-4q4pcsfnhfh7ej98ahjfcm1ocuiqlvfd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXApTFP7qHipiB_gCh1skggL5STFbCCW0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "829800706469-4q4pcsfnhfh7ej98ahjfcm1ocuiqlvfd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
